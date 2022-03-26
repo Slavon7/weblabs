@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style/style.css">
+<title>Лабораторна робота №09</title>
+<script src="js/main.js"></script>
+</head>
+<body>
+
+	<header class="header">
+		<div class="conteinder">
+			<div class="header__button">
+				<a class="button-item" href="../lab08/index.html">Prev</a>
+				<a class="button-item" href="../lab10/index.html">Next</a>
+			</div>
+		</div>
+	</header>
+	<section>
+		<script>
+			window.onload = function(){
+				document.getElementById("res").onclick = function (){
+					var sumByGroup = [0, 0];
+					for (var i=1; i<=5; i++){
+						name = "ques_"+i;
+						answ = document.querySelectorAll('[name=' + name + ']');
+						if (answ[0].checked){
+							sumByGroup[answ[0].value-1]++;
+						}else if (answ[1].checked){
+							sumByGroup[answ[1].value-1]++;
+						}
+					}
+					for (var i=0; i<sumByGroup.length; i++){
+						document.getElementById("resTxt").insertAdjacentHTML("beforeEnd", "Правильних " + sumByGroup[i] + "<br>");
+					}
+				}
+			}
+			</script>
+	<section>
+		<div class="main">
+		<div class="container">
+			<div class="main__block">
+			1) Правильно ли задан цвет страницы?<br>
+			<input type="radio" name="ques_1" value="1" id="q1_1"><label for="q1_1">Так</label>
+			<input type="radio" name="ques_1" value="2" id="q1_2"><label for="q1_2">Ні</label><br>
+			2) Можно ли задать цвет страницы в HEX<br>
+			<input type="radio" name="ques_2" value="1" id="q2_1"><label for="q2_1">Так</label>
+			<input type="radio" name="ques_2" value="2" id="q2_2"><label for="q2_2">Ні</label><br>
+			3) Можно ли задать цвет в HTML?<br>
+			<input type="radio" name="ques_3" value="2" id="q3_1"><label for="q3_1">Так</label>
+			<input type="radio" name="ques_3" value="1" id="q3_2"><label for="q3_2">Ні</label><br>
+			4) Можно ли покрасить отдельный блок страницы?<br>
+			<input type="radio" name="ques_4" value="1" id="q4_1"><label for="q4_1">Так</label>
+			<input type="radio" name="ques_4" value="2" id="q4_2"><label for="q4_2">Ні</label><br>
+			5) Можно ли редактировать прозрачность цвета?<br>
+			<input type="radio" name="ques_5" value="1" id="q5_1"><label for="q5_1">Так</label>
+			<input type="radio" name="ques_5" value="2" id="q5_2"><label for="q5_2">Ні</label><br>
+			<br>
+			<a class="button-item" type="button" id="res">Результат</a>
+			<div id="resTxt"></div>	
+			</div>
+		</div>	
+	</div>
+	</section>
+</body>
+</html>

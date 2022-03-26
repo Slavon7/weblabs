@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+<title>Лабораторна робота №8</title>
+</head>
+<body>
+
+   <header class="header">
+		<div class="conteinder">
+			<div class="header__button">
+				<a class="button-item" href="../lab07/index.html">Prev</a>
+				<a class="button-item" href="../lab09/index.html">Next</a>
+			</div>
+		</div>
+	</header>
+
+<form method="post" target="_blank">
+   <div class="text-field">
+   <label class="text-field__label" for="group-name">Student group</label>
+   <input class="text-field__input" type="text" placeholder="КН-920Є" id="group-name" name="group-name"><br><br>
+   <label class="text-field__label" for="fname">First name</label>
+   <input class="text-field__input" type="text" placeholder="Оменюк В.І." id="fname" name="fname"><br><br>
+   <label class="text-field__label" for="fname">Your age</label>
+   <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+   <input class="text-field__input" type="number" placeholder="0-99999" name="num" min="0" max="99999"><br><br>
+   </div>
+
+   <input class="radio" type="radio" name="Full_Compressed" id="full" value="full">
+   <label for="full">Full</label><br><br>
+   <input class="radio" type="radio" name="Full_Compressed" id="compressed" value="compressed">
+   <label for="compressed">Compressed</label><br><br>
+   
+<div class="box">
+   <label for="cars"></label>
+   <select name="cars" id="cars">
+      <option value="MAX">MAX</option>
+      <option value="MIN">MIN</option>
+      <option value="Mercedes">RU</option>
+   </select><br><br>
+</div>
+   
+   <button class="btn" type="submit" value="Next">Next</button>
+   <button class="btn" type="reset" value="Reset">Reset</button>
+</form>
+
+</body>
+</html>
